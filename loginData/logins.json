@@ -1,0 +1,25 @@
+[{
+	"username": "admin",
+	"email": "admin@localhost.com"
+},
+{
+	"username": "thomas",
+	"email": "thomas@localhost.com"
+},
+{
+	"username": "tommy",
+	"email": "tommy@localhost.com"
+},
+{
+	"username": "nottommy",
+	"email": "nottommy@localhost.com"
+},
+{
+	"username": "marxsen",
+	"email": "marxsen@localhost.com"
+},
+{
+	"username": "marx",
+	"email": "marx@localhost.com"
+}
+]
