@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const importData = require("./questionData/L1M1.json");
-let port = process.env.port || 3005;
+let port = process.env.PORT || 3005;
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
