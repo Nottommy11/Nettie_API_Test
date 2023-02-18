@@ -9,9 +9,7 @@ jobs:
     steps:
       - run: node --version
       - run: npm --version
-
       - uses: actions/checkout@v3
-
       - run: npm install
 
       - run: node "$GITHUB_WORKSPACE/QuestionData/ExcelParser.js"
