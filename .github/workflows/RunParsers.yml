@@ -1,4 +1,4 @@
-name: BuildContainer
+name: RunParsers
 
 on: push
 
