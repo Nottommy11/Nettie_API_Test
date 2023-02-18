@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const questionDataL1M1 = require("./questionData/L1M1.json");
+const questionDataMod1 = require("./QuestionData/JSONData/mod1-singleAnswer.json");
 const loginData = require("./loginData/logins.json");
 let port = process.env.PORT || 3005;
 
@@ -11,8 +11,8 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/questionData/L1/M1", (req, res) => {
-  res.status(200).send(questionDataL1M1);
+app.get("/questionData/Mod1", (req, res) => {
+  res.status(200).send(questionDataMod1);
 });
 
 app.get("/loginData", (req, res) => {

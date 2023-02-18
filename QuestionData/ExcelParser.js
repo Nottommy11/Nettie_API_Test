@@ -1,8 +1,8 @@
 const XLSX = require("xlsx");
 const fs = require("fs");
 
-const ExcelData = "./Excel Data";
-const CSVData = "./CSV Data";
+const ExcelData = "./ExcelData";
+const CSVData = "./CSVData";
 
 // Make an async function that gets executed immediately
 (async () => {

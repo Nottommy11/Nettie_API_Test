@@ -1,8 +1,8 @@
 const fs = require("fs");
 const Papa = require("papaparse");
 
-const CSVData = "./CSV Data";
-const JSONData = "./JSON Data";
+const CSVData = "./CSVData";
+const JSONData = "./JSONData";
 
 // Make an async function that gets executed immediately
 (async () => {
