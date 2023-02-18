@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const questionDataMod1 = require("./QuestionData/JSONData/mod1-singleAnswer.json");
+const questionDataMod1 = require("./QuestionData/JSONData/fundamental questions - T1.json");
 const loginData = require("./loginData/logins.json");
 let port = process.env.PORT || 3005;
 

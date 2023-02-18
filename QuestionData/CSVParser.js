@@ -42,6 +42,7 @@ const readCSV = async (filePath) => {
 const saveToJson = async (data, fileName) => {
   const newData = [];
 
+  // Loop through the data and push to new array, make sure to check for null or empty strings before pushing to array
   data.forEach((element) => {
     const answers = [];
     element.Answer1 == null || element.Answer1 === ""
