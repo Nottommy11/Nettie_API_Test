@@ -4,6 +4,10 @@ const Papa = require("papaparse");
 const CSVData = "./QuestionData/CSVData";
 const JSONData = "./QuestionData/JSONData";
 
+if (!fs.existsSync(JSONData)) {
+  fs.mkdirSync(JSONData);
+}
+
 // Make an async function that gets executed immediately
 (async () => {
   // Our starting point

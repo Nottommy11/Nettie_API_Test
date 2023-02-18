@@ -4,6 +4,10 @@ const fs = require("fs");
 const ExcelData = "./QuestionData/ExcelData";
 const CSVData = "./QuestionData/CSVData";
 
+if (!fs.existsSync(CSVData)) {
+  fs.mkdirSync(CSVData);
+}
+
 // Make an async function that gets executed immediately
 (async () => {
   // Our starting point
