@@ -1,8 +1,8 @@
 const fs = require("fs");
 const Papa = require("papaparse");
 
-const CSVData = "./CSVData";
-const JSONData = "./JSONData";
+const CSVData = "./QuestionData/CSVData";
+const JSONData = "./QuestionData/JSONData";
 
 // Make an async function that gets executed immediately
 (async () => {
@@ -44,30 +44,70 @@ const saveToJson = async (data, fileName) => {
 
   data.forEach((element) => {
     const answers = [];
-    answers.push(element.Answer1);
-    answers.push(element.Answer2);
-    answers.push(element.Answer3);
-    answers.push(element.Answer4);
-    answers.push(element.Answer5);
+    element.Answer1 == null || element.Answer1 === ""
+      ? ""
+      : answers.push(element.Answer1);
+    element.Answer2 == null || element.Answer2 === ""
+      ? ""
+      : answers.push(element.Answer2);
+    element.Answer3 == null || element.Answer3 === ""
+      ? ""
+      : answers.push(element.Answer3);
+    element.Answer4 == null || element.Answer4 === ""
+      ? ""
+      : answers.push(element.Answer4);
+    element.Answer5 == null || element.Answer5 === ""
+      ? ""
+      : answers.push(element.Answer5);
 
     const writeIns = [];
-    writeIns.push(element.WriteIn1);
-    writeIns.push(element.WriteIn2);
-    writeIns.push(element.WriteIn3);
-    writeIns.push(element.WriteIn4);
-    writeIns.push(element.WriteIn5);
+    element.WriteIn1 == null || element.WriteIn1 === ""
+      ? ""
+      : writeIns.push(element.WriteIn1);
+    element.WriteIn2 == null || element.WriteIn2 === ""
+      ? ""
+      : writeIns.push(element.WriteIn2);
+    element.WriteIn3 == null || element.WriteIn3 === ""
+      ? ""
+      : writeIns.push(element.WriteIn3);
+    element.WriteIn4 == null || element.WriteIn4 === ""
+      ? ""
+      : writeIns.push(element.WriteIn4);
+    element.WriteIn5 == null || element.WriteIn5 === ""
+      ? ""
+      : writeIns.push(element.WriteIn5);
 
     const incorrectAnswers = [];
-    incorrectAnswers.push(element.IncorrectAnswer1);
-    incorrectAnswers.push(element.IncorrectAnswer2);
-    incorrectAnswers.push(element.IncorrectAnswer3);
-    incorrectAnswers.push(element.IncorrectAnswer4);
-    incorrectAnswers.push(element.IncorrectAnswer5);
-    incorrectAnswers.push(element.IncorrectAnswer6);
-    incorrectAnswers.push(element.IncorrectAnswer7);
-    incorrectAnswers.push(element.IncorrectAnswer8);
-    incorrectAnswers.push(element.IncorrectAnswer9);
-    incorrectAnswers.push(element.IncorrectAnswer10);
+    element.IncorrectAnswer1 == null || element.IncorrectAnswer1 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer1);
+    element.IncorrectAnswer2 == null || element.IncorrectAnswer2 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer2);
+    element.IncorrectAnswer3 == null || element.IncorrectAnswer3 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer3);
+    element.IncorrectAnswer4 == null || element.IncorrectAnswer4 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer4);
+    element.IncorrectAnswer5 == null || element.IncorrectAnswer5 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer5);
+    element.IncorrectAnswer6 == null || element.IncorrectAnswer6 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer6);
+    element.IncorrectAnswer7 == null || element.IncorrectAnswer7 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer7);
+    element.IncorrectAnswer8 == null || element.IncorrectAnswer8 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer8);
+    element.IncorrectAnswer9 == null || element.IncorrectAnswer9 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer9);
+    element.IncorrectAnswer10 == null || element.IncorrectAnswer10 === ""
+      ? ""
+      : incorrectAnswers.push(element.IncorrectAnswer10);
 
     newData.push({
       question: element.Question,

@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "excel": "node QuestionData/ExcelParser.js",
+    "csv": "node QuestionData/CSVParser.js"
   },
   "repository": {
     "type": "git",
