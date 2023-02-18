@@ -3,5 +3,5 @@ description: "Parse Excel files into CSV files"
 author: "Thomas Marxsen"
 
 runs:
-  using: "node12"
+  using: "node16"
   main: "./QuestionData/ExcelParser.js"
