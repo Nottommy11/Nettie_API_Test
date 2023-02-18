@@ -19,7 +19,7 @@ jobs:
       - run: node  "$GITHUB_WORKSPACE/QuestionData/CSVParser.js"
 
       - run: |
-          git config --global user.name 'Thomas Marxsen'
+          git config --global user.name 'Nottommy11'
           git config --global user.email 'thomas.marxsen11@gmail.com'
           git add -A
           git commit -am "Automated Parsing"
