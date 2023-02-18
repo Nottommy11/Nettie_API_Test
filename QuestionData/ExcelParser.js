@@ -1,4 +1,4 @@
-const XLSX = require("xlsx");
+const XLSX = require("xlsx/xlsx");
 const fs = require("fs");
 
 const ExcelData = "./QuestionData/ExcelData";
