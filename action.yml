@@ -1,7 +1,0 @@
-name: "Run Excel Parser"
-description: "Parse Excel files into CSV files"
-author: "Thomas Marxsen"
-
-runs:
-  using: "node16"
-  main: "./QuestionData/ExcelParser.js"
