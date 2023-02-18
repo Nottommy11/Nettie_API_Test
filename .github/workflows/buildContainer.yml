@@ -7,9 +7,25 @@ jobs:
     runs-on: ubuntu-latest
     container: node:16
     steps:
+      - name: Check Versions
       - run: node --version
       - run: npm --version
+
       - uses: actions/checkout@v3
+
+      - name: Install Node Dependencies
       - run: npm install
+
+      - name: Run Excel Parser
       - run: node "$GITHUB_WORKSPACE/QuestionData/ExcelParser.js"
+
+      - name: Run CSV Parser
       - run: node  "$GITHUB_WORKSPACE/QuestionData/CSVParser.js"
+
+      - name: Commit Parses
+        run: |
+          git config --global user.name 'Thomas Marxsen'
+          git config --global user.email 'thomas.marxsen11@gmail.com'
+          git add -A
+          git commit -am "Automated Parsing"
+          git push
