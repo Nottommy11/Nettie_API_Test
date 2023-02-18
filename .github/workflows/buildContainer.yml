@@ -23,7 +23,7 @@ jobs:
       - run: node  "$GITHUB_WORKSPACE/QuestionData/CSVParser.js"
 
       - name: Commit Parses
-        run: |
+      - run: |
           git config --global user.name 'Thomas Marxsen'
           git config --global user.email 'thomas.marxsen11@gmail.com'
           git add -A
