@@ -19,6 +19,7 @@ jobs:
       - run: node  "$GITHUB_WORKSPACE/QuestionData/CSVParser.js"
 
       - run: |
+          git config --global --add safe.directory /__w/Nettie_API_Test/Nettie_API_Test
           git config --global user.name 'Nottommy11'
           git config --global user.email 'thomas.marxsen11@gmail.com'
           git add -A
