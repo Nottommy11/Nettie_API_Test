@@ -1,12 +1,14 @@
 name: Test
 
-on:
-  push:
-    branches: "**"
+on: push
 
 jobs:
-  test:
+  build-node:
     runs-on: ubuntu-latest
+    container: node:16
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./
+      - run: node --version
+      - run: npm --version
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: ./
