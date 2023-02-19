@@ -2,6 +2,8 @@
 
 This is a test of the Nettie API.
 
+Heroku hosting: https://nettie-test-api-deploy.herokuapp.com/
+
 ## Installs & Commands
 
 - [YouTube Tutorial]["https://youtu.be/u2Df5A4BS8s"]
