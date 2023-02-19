@@ -1,8 +1,0 @@
-Question,Answer,Alternate1,Alternate2,IncorrectAnswer1,IncorrectAnswer2,IncorrectAnswer3,IncorrectAnswer4,IncorrectAnswer5,IncorrectAnswer6
-What are characteristics of a peer-to-peer network,easy to set up,less complex,,centralized administration,easily scalable,high performance,secure,,
-Examples of intermediary devices are…,switch,router,,PC,server,end device,,,
-Two most common types of networks are…,local area network,wide area network,,personal area network,metro area network,,,,
-What are characteristics of a LAN infrastructure?,interconnect end devices in a limited area,administered by a single organization,,Typically provide slower speed links,Typically adminstered by one or more service providers,,,,
-What are characteristics of a WAN infrastructure?,Typically provide slower speed links,Typically adminstered by one or more service providers,,Provide high-speed bandwidth to internal devices,administered by a single organization,,,,
-What are examples of external security threats?,zero-day attacks,malware,,malicious employees,lost or stolen devices,,,,
-What are examples of internal security threats?,malicious employees,lost or stolen devices,,malware,denial of service attacks,identity theft,,,
