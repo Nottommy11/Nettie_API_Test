@@ -1,0 +1,26 @@
+Question,Answer,,Notes (can delete. Only for explanatory purpose)
+When would you use a console cable?,initial [config | setup],,
+"Which interface allows the user to interact with the system using an environment of graphical icons, menus, and windows?",[gui | graphical user interface],,
+Write an example of User EXEC mode,>,,answer must end w/ a  >
+Write an example of Privileged EXEC mode,#,,user input must include '#' and !include [config | config-line | conifig-if]
+Write an example of Global Configuration mode,(config)#,,user input must include '(config)#'
+Write an example of Line Configuration mode,(config-line)#,,user input must include '(config-line)#'
+Write an example of Interface Configuration mode,(config-if)#,,user input must include '(config-if)#'
+Command to display the current configuration loaded in memory,show running-config,,user input must include 'show run'
+What is the dotted decimal representation of a /24 subnet mask?,,,
+What is the binary representation of a /24 subnet mask?,,,
+What is the slash notation for subnet mask 255.255.255.0?,,,
+Separate the following MAC address into its OUI and Vendor assigned parts: 3a:6d:2e:77:9b:14,3a:6d:2e,77:9b:14,Two textboxes displayed labeled OUI and Vendor Assigned
+What is the command to enter privilege EXEC mode?,enable,,
+What is the command to enter Global Configuration mode?,[configure terminal | conf t | config t],,
+What is the command to enter SVI 1?,[interface vlan 1 | int vlan 1 | int vlan1],,
+What is the command to enter fastEthernet 0/1?,[interface fa0/1 | interface f0/1 | int fa0/1 | int f0/1],,
+An IPv4 address is how many bits long?,32,,
+An IPv6 address is how many bits long?,128,,
+How many octets in an IPv4 address?,4,,
+How many bits in an octet?,8,,
+What is the minimum decimal value allowed in an octet?,0,,
+What is the maximum decimal value allowed in an octet?,255,,
+The user interface that allows users to requst specific tasks from the computer either through the CLI or GUI interfaces.,shell,,
+Communicates between the hardware and software of a computer and manages how hardware resources are used to meet software requirements.,kernel,,
+The physical part of a computer including underlying electronics.,hardware,,
