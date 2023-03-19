@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 
+
 const questionDataFundies1 = require("./QuestionData/JSONData/fundamental questions - T1.json");
 const questionDataFundies2 = require("./QuestionData/JSONData/fundamental questions - T2.json");
 const questionDataMod1 = require("./QuestionData/JSONData/mod1-singleAnswer.json");
@@ -11,6 +12,7 @@ let port = process.env.PORT || 3005;
 
 app.use(cors());
 
+//routes
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
