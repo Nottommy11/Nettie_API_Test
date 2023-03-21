@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const postRoute = require('./routes/posts')
 
 
 const questionDataFundies1 = require("./QuestionData/JSONData/fundamental questions - T1.json");
@@ -10,7 +11,9 @@ const questionDataMod2 = require("./QuestionData/JSONData/mod2-singleAnswer.json
 const loginData = require("./loginData/logins.json");
 let port = process.env.PORT || 3005;
 
+//middleware
 app.use(cors());
+app.use(express.json())
 
 //routes
 app.get("/", (req, res) => {
@@ -36,6 +39,9 @@ app.get("/questionData/Module2", (req, res) => {
 app.get("/loginData", (req, res) => {
   res.status(200).send(loginData);
 });
+
+//post route middleware, go here to post user
+app.use('/api/posts', postRoute)
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
