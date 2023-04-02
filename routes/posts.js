@@ -1,11 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const Post = require('../loginData/User')
+const User = require('../loginData/User')
+const verify = require('./verifyToken')
 
 //get all of the posts
 router.get('/', async(req, res)=>{ //sends us back a message when we are go to the route
     try{
-        const posts = await Post.find() //saves to the data base
+        const posts = await User.find() //saves to the data base
         res.json(posts)
     } catch(err){
         res.json({message: err})
@@ -13,12 +14,12 @@ router.get('/', async(req, res)=>{ //sends us back a message when we are go to t
 })
 
 //submits a post
-router.post('/', async (req, res) => {
+router.post('/',verify, async (req, res) => {
         console.log(req.body) //just to see it come through
 
-        const post = new Post({
-            username: req.body.title,
-            email: req.body.description
+        const post = new User({
+            username: req.body.username,
+            email: req.body.email
         })
         try {
             const savedPost = await post.save() //saves to the data base
@@ -32,7 +33,7 @@ router.post('/', async (req, res) => {
 //specific post
 router.get('/:postId', async(req, res) => {
     try {
-        const specificPost = Post.findById(req.params.postId)
+        const specificPost = User.findById(req.params.postId)
         res.json(specificPost)
     } catch (err) {
         res.json({ message: err })
@@ -43,7 +44,7 @@ router.get('/:postId', async(req, res) => {
 //delete post
 router.delete('/:postId', async(req, res) => {
     try {
-        const removedPost = Post.remove({_id: req.params.postId})
+        const removedPost = User.remove({_id: req.params.postId})
         res.json(removedPost)
     } catch (err) {
         res.json({ message: err })
@@ -54,7 +55,7 @@ router.delete('/:postId', async(req, res) => {
 //update post
 router.patch('/:postId', (req, res) => {
     try {
-        const updatedPost = Post.updateOne(
+        const updatedPost = User.updateOne(
             {_id: req.params.postId}, 
             {$set: {title: req.body.title}}
         )
